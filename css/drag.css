@@ -1,0 +1,16 @@
+#dropZone {
+      width: 200px;
+      height: 200px;
+      border: 2px seagreen;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      color: seagreen;
+    }
+
+    #dropZone.dragover {
+      background-color: lightgray;
+    }

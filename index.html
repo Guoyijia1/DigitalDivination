@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Welcome Home</title>
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/record.css">
+	<link rel="stylesheet" href="css/drag.css">
+</head>
+<body>
+
+
+
+
+  	<div class="profileBox">
+  	
+
+  	</div>
+
+  		<div class="introBox">
+  			<p><br><br><br><br>good morning, my friend.</p>
+
+  		</div>
+
+
+
+  		<div class="introBox">
+  			<p><br><br><br><br>give me your name.</p>
+
+  		</div>
+
+
+
+
+	<div class="container">
+
+	<form>
+  <!--<label for="fname">First name:</label><br>-->
+  <input type="text" id="fname" name="fname" placeholder="first name"> <br>
+  <!--<label for="lname">Last name:</label><br>-->
+  <input type="text" id="lname" name="lname" placeholder="last name">
+</form>
+
+</div>
+
+<h1>
+	hello there is my font<br>I am speaking some meaningfull things<br>if you want to know, just tell me
+</h1>
+
+<iframe style="width: 350px; height: 360px; overflow: hidden;"
+src="https://editor.p5js.org/YijiaGuo/full/Yg2EneHgD"></iframe>
+
+<h1>
+	hello there is my font<br>I am speaking some meaningfull things<br>if you want to know, just tell me
+</h1>
+
+  <script>
+    function requestCameraAccess() {
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+          const videoElement = document.createElement("video");
+          videoElement.srcObject = stream;
+          document.body.appendChild(videoElement);
+          videoElement.play();
+        })
+        .catch(function(error) {
+          console.error("Error accessing camera:", error);
+        });
+    }
+  </script>
+
+</body>
+
+
+<body>
+  <button id="recordButton" class="recordButton" onclick="toggleRecording()">Record</button>
+  <script>
+    let mediaRecorder;
+    let chunks = [];
+    let isRecording = false;
+
+    function toggleRecording() {
+      if (isRecording) {
+        stopRecording();
+      } else {
+        startRecording();
+      }
+    }
+
+    function startRecording() {
+      navigator.mediaDevices.getUserMedia({ audio: true })
+        .then(function(stream) {
+          mediaRecorder = new MediaRecorder(stream);
+          mediaRecorder.start();
+
+          document.getElementById("recordButton").classList.remove("recordButton");
+          document.getElementById("recordButton").classList.add("stopButton");
+          document.getElementById("recordButton").textContent = "Stop";
+          isRecording = true;
+
+          chunks = [];
+          mediaRecorder.addEventListener("dataavailable", function(event) {
+            chunks.push(event.data);
+          });
+        })
+        .catch(function(error) {
+          console.error("Error accessing microphone:", error);
+        });
+    }
+
+    function stopRecording() {
+      mediaRecorder.stop();
+      mediaRecorder.stream.getTracks().forEach(track => track.stop());
+
+      document.getElementById("recordButton").classList.remove("stopButton");
+      document.getElementById("recordButton").classList.add("recordButton");
+      document.getElementById("recordButton").textContent = "Record";
+      isRecording = false;
+
+      const blob = new Blob(chunks, { type: "audio/wav" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      document.body.appendChild(a);
+      a.href = url;
+      a.download = "recording.wav";
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+
+
+<body>
+<h1>
+	hello there is my font<br>I am speaking some meaningfull things<br>if you want to know, just tell me
+</h1>
+	
+  <div id="dropZone" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+    Drag and drop JPG or WAV files here
+  </div>
+
+  <script>
+    function handleDragOver(event) {
+      event.preventDefault();
+      event.dataTransfer.dropEffect = "copy";
+      document.getElementById("dropZone").classList.add("dragover");
+    }
+
+    function handleDrop(event) {
+      event.preventDefault();
+      document.getElementById("dropZone").classList.remove("dragover");
+      
+      const files = event.dataTransfer.files;
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const fileType = file.type;
+        
+        if (fileType === "image/jpeg" || fileType === "audio/wav") {
+          console.log("File:", file.name);
+          // Perform actions with the dropped file (e.g., save, process, etc.)
+        } else {
+          console.log("Invalid file type:", fileType);
+        }
+      }
+    }
+  </script>
+</body>
+
+
+</html>

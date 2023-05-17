@@ -1,0 +1,19 @@
+ /* Customize the "Record" button */
+    .recordButton {
+
+      margin-left: 50%;
+      background-image: url('../asset/2.png');
+      width: 100px;
+      height: 100px;
+      /* Add any other custom styles for the "Record" button */
+    }
+
+    /* Customize the "Stop" button */
+    .stopButton {
+
+      margin-left: 50%;
+      background-image: url('../asset/3.png');
+      width: 100px;
+      height: 100px;
+      /* Add any other custom styles for the "Stop" button */
+    }
