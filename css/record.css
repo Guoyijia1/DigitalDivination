@@ -1,19 +1,35 @@
- /* Customize the "Record" button */
+
     .recordButton {
 
-      margin-left: 50%;
-      background-image: url('../asset/2.png');
-      width: 100px;
-      height: 100px;
-      /* Add any other custom styles for the "Record" button */
+      margin-left: 55%;
+      background-image: url('../asset/1.gif');
+      width: 300px;
+      height: 300px;
+ 
+      font-family: 'Special Elite', cursive;
+      font-size: 55px;
     }
 
-    /* Customize the "Stop" button */
+  
     .stopButton {
 
-      margin-left: 50%;
-      background-image: url('../asset/3.png');
-      width: 100px;
-      height: 100px;
-      /* Add any other custom styles for the "Stop" button */
+      margin-left: 55%;
+      background-image: url('../asset/2.gif');
+      width: 300px;
+      height: 300px;
+
+      font-family: 'Special Elite', cursive;
+      font-size: 55px;
+    }
+
+
+    .GenerateBtn {
+       margin-left: 45%;
+      background-image: url('../asset/2.gif');
+      width: 300px;
+      height: 300px;
+
+      font-family: 'Special Elite', cursive;
+      font-size: 55px;
+
     }

@@ -7,28 +7,51 @@
 	<link rel="stylesheet" href="css/home.css">
 	<link rel="stylesheet" href="css/record.css">
 	<link rel="stylesheet" href="css/drag.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Rajdhani&family=Rubik+Pixels&family=Space+Grotesk:wght@300&family=Special+Elite&display=swap" rel="stylesheet">
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 </head>
 <body>
 
 
 
 
-  	<div class="profileBox">
-  	
+  	<div class="profileBox"></div>
 
-  	</div>
 
-  		<div class="introBox">
-  			<p><br><br><br><br>good morning, my friend.</p>
+    <div><br><br><br><br><br><br></div>
+
+  		<div class="introductionBox">
+  			<h1><br><br><br><br>Good evening, my friend.<h1/>
+
+
+          <!--<h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Hello, I am God.<br>I can help you occupy servants, the self in that world,<br>You can see yourself in another world line one day,<br> do you want to meet him? <br>Do you want to talk to him?<br>If your answer is yes<br>I need to collect a part of your body:<br>
+          -->
+
+        </h1>
+
+        <h1><br>But you don't need who I am.</h1>
+        <h1><br>I can give you a divination--the other "self" in that world</h1>
+        <h1><br>You can see "yourself" in another world line one day, somewhere</h1>
+        <h1><br>do you want to meet him?  if "Yes"</h1>
+        <h1><br>Then</h1>
 
   		</div>
 
 
 
   		<div class="introBox">
-  			<p><br><br><br><br>give me your name.</p>
+  			<p><br><br><br><br><br><br><br><br><br>give me your name.</p>
 
   		</div>
+
+
 
 
 
@@ -36,8 +59,12 @@
 	<div class="container">
 
 	<form>
+    <label for="name"></label>
+    <input type="text" id="name" name="name" placeholder="first name"> <br>
   <!--<label for="fname">First name:</label><br>-->
-  <input type="text" id="fname" name="fname" placeholder="first name"> <br>
+
+ <!-- <input type="text" id="fname" name="fname" placeholder="first name"> <br> -->
+
   <!--<label for="lname">Last name:</label><br>-->
   <input type="text" id="lname" name="lname" placeholder="last name">
 </form>
@@ -45,35 +72,49 @@
 </div>
 
 <h1>
-	hello there is my font<br>I am speaking some meaningfull things<br>if you want to know, just tell me
+  <br> <br> <br> <br> <br>
+I am the owner of my karma .
+I inherit my karma.
+I am born of my karma.
+I am related to my karma.
+I live supported by my karma.
+Whatever karma I create, whether good or evil, that I shall inherit.
 </h1>
 
-<iframe style="width: 350px; height: 360px; overflow: hidden;"
+<div class="introBox">
+        <p><br><br><br><br><br><br><br><br><br>give me your piece of face.</p>
+
+      </div>
+
+
+
+<div class="camera">
+<iframe style="width: 650px; height: 360px; overflow: hidden;"
 src="https://editor.p5js.org/YijiaGuo/full/Yg2EneHgD"></iframe>
+<div/>
+
 
 <h1>
-	hello there is my font<br>I am speaking some meaningfull things<br>if you want to know, just tell me
+  <br> <br> <br> <br> <br>
+  Just as treasures are uncovered from the earth, so virtue appears from good deeds, and wisdom appears from a pure and peaceful mind. To walk safely through the maze of human life, one needs the light of wisdom and the guidance of virtue.
 </h1>
 
-  <script>
-    function requestCameraAccess() {
-      navigator.mediaDevices.getUserMedia({ video: true })
-        .then(function(stream) {
-          const videoElement = document.createElement("video");
-          videoElement.srcObject = stream;
-          document.body.appendChild(videoElement);
-          videoElement.play();
-        })
-        .catch(function(error) {
-          console.error("Error accessing camera:", error);
-        });
-    }
-  </script>
+
+
+
+
 
 </body>
 
 
-<body>
+<main>
+
+  <div class="introBox">
+        <p><br><br><br><br><br><br><br><br><br>give me your piece of voice.<br></p>
+
+      </div>
+
+
   <button id="recordButton" class="recordButton" onclick="toggleRecording()">Record</button>
   <script>
     let mediaRecorder;
@@ -128,17 +169,43 @@ src="https://editor.p5js.org/YijiaGuo/full/Yg2EneHgD"></iframe>
       URL.revokeObjectURL(url);
     }
   </script>
-</body>
+</main>
 
 
 <body>
-<h1>
-	hello there is my font<br>I am speaking some meaningfull things<br>if you want to know, just tell me
+<h1><br><br><br>
+	TONPA LA MED SANG GYAY RINPOCHE
+KYOBPA LA MED DAM CHHO RINPOCHE
+DRENPA LA MED GEDUN RINPOCHE
+KYAB NAY KON CHHOK SUM LA CHHOD PA BUL
 </h1>
+
+
+
+<div class="introBox">
+        <p><br><br><br><br><br><br><br><br><br>then drag all the thing in my heart.<br><br><br><br></p>
+
+      </div>
+
+
 	
   <div id="dropZone" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
-    Drag and drop JPG or WAV files here
+    <<!--Drag and drop JPG or WAV files here-->
   </div>
+
+
+
+
+<!--
+  <div class="nextPage">
+      <li><a href="second.html">Next Page</a></li>
+      
+    </div>
+
+-->
+
+
+
 
   <script>
     function handleDragOver(event) {
@@ -166,6 +233,37 @@ src="https://editor.p5js.org/YijiaGuo/full/Yg2EneHgD"></iframe>
     }
   </script>
 </body>
+
+
+
+
+
+<body>
+
+
+ <div class="introBox">
+        <p><br><br><br><br><br><br><br><br><br>Then you can see your result right now<br><br><br><br></p>
+
+      </div>
+
+  <div class="container">
+  <form>
+    
+    <br><br>
+    <button id="generateBtn" class="GenerateBtn" type="submit">You will meet "it" in</button>
+
+  </form>
+  <br>
+  <div id="result"></div>
+<br><br><br><br><br><br>
+
+<div/>
+
+</body>
+
+<script src="script.js"></script>
+
+
 
 
 </html>
